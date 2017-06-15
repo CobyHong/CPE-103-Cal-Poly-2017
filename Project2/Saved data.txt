@@ -1,0 +1,24 @@
+linked_list.sort identity: 10 elements
+        1000 iterations in 0.05243136598015528 seconds
+linked_list.sort identity: 100 elements
+        1000 iterations in 3.239134230807521 seconds
+linked_list.sort identity: 1000 elements
+        1000 iterations in 336.032351974438 seconds
+array_list.sort identity: 10 elements
+        1000 iterations in 0.005183995904019412 seconds
+array_list.sort identity: 100 elements
+        1000 iterations in 0.049664355820709716 seconds
+array_list.sort identity: 1000 elements
+        1000 iterations in 0.6283819232537553 seconds
+linked_list.foreach identity: 10 elements
+        1000 iterations in 0.007533031085017683 seconds
+linked_list.foreach identity: 100 elements
+        1000 iterations in 0.06619016992380011 seconds
+linked_list.foreach identity: 1000 elements
+        1000 iterations in 0.6345618689881576 seconds
+array_list.foreach identity: 10 elements
+        1000 iterations in 0.002347454935318183 seconds
+array_list.foreach identity: 100 elements
+        1000 iterations in 0.016363048799576063 seconds
+array_list.foreach identity: 1000 elements
+        1000 iterations in 0.17333675193145837 seconds

@@ -1,0 +1,80 @@
+Student: cohong
+
+Grader's Note: READ THIS! This is NOT your final grade for this assignment;
+      this is just a preliminary run to give you some feedback on how things
+      are going. We may change up point values or add more points later, or
+      your instructor may even choose to ignore these point values and demo
+      your assignment instead.
+
+Your Score for 202 Lab 2: 64/100
+
+Grading Breakdown:
+   Part 0:
+      list_ops.py: found. (0/0 points)
+      Running Python unittest...
+      Ran 12 tests in 0.009s
+      Checking test coverage...
+      Statements: 95, Missed: 0, Coverage: 100%
+      Tests completed. (10/10 points)
+   Part 0 Score: 10/10 points
+
+   Part 1:
+      tree_ops.py: found. (0/0 points)
+      Running Python unittest...
+      Ran 11 tests in 0.008s
+      Checking test coverage...
+      Statements: 95, Missed: 1, Coverage: 99%
+      Tests completed. (9/10 points)
+   Part 1 Score: 9/10 points
+
+   Part 2:
+      list_ops.py: found. (0/0 points)
+      tree_ops.py: found. (0/0 points)
+      Running Python unittest...
+      Ran 30 tests in 0.005s
+      FAILED (failures=2, errors=1)
+      Tests completed. (45/50 points)
+   Part 2 Score: 45/50 points
+
+   Part 3:
+      Additional points may be added later.
+      Some points reserved for hand grading of style after the
+      deadline passes.
+      Tests completed. (0/30 points)
+   Part 3 Score: 0/30 points
+
+   On-time submission multiplier: 100%
+   Total Score: 64/100 points
+
+If you think that there is an error with this grading:
+ * Check the assignment specification to see if you missed something.
+ * Check that you handed in all required files.
+ * Check that your program runs correctly on Cal Poly's servers.
+
+Only after you have done that, email your professor:
+   Professor John Clements (clements@calpoly.edu)
+   Professor Sussan Einakian (seinakia@calpoly.edu)
+   Professor David Parkinson (dsparkin@calpoly.edu)
+   Professor Paul Hatalsky (phatalsk@calpoly.edu)
+   Professor Dieter Koller (dokoller@calpoly.edu)
+   Professor Brian Jones (btjones@calpoly.edu)
+And your grader:
+   Christopher Siu (cesiu@calpoly.edu)
+
+Please do not reply directly to this email's sender, or we won't receive
+your email. Additionally, please include a copy of this email and a description
+of what you believe is graded incorrectly. You must send the email from your
+Cal Poly account for verification purposes.
+
+
+The first error, if any, is shown below (Note that if yours is a runtime error,
+there might not be any useful information shown here -- try running your code
+from the command line.):
+
+Additional Part 1 details:
+   This part tests the code coverage of your tests. If you did not get
+   full credit on this part, either you failed one of your own tests or
+   less than 100% of the code in your program was run by your tests.
+   Name           Stmts   Miss  Cover   Missing
+   --------------------------------------------
+   /tree_ops.py      95      1    99%   82

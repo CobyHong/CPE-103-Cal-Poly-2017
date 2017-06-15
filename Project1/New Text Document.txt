@@ -1,0 +1,109 @@
+class TestCases(unittest.TestCase):
+	#1
+	def test_multi_sub(self):
+		list1 = Pair("x",Pair("y",Pair("z", "mt")))
+		test = multi_sub(list1)
+		self.assertEqual(test, Pair('{!r}', Pair('{!r}', Pair('{!r}', 'mt'))))
+	#2
+	def test_multi_sub_2(self):
+		list1 = "mt"
+		test = multi_sub(list1)
+		self.assertEqual(test, "mt")
+	#3
+	def test_join_lines(self):
+		list1 = Pair("x",Pair("y",Pair("z", "mt")))
+		test = join_lines(list1)
+		self.assertEqual(test, 'x\ny\nz\n')
+	#4
+	def test_join_lines_2(self):
+		list1 = "mt"
+		test = join_lines(list1)
+		self.assertEqual(test, "")
+	#5
+	def test_fields_to_assignments(self):
+		list1 = Pair("x",Pair("y",Pair("z", "mt")))
+		test = fields_to_assignments(list1)
+		self.assertEqual(test, Pair('        self.x = x', Pair('        self.y = y', Pair('        self.z = z', 'mt'))))
+	#6
+	def test_fields_to_assignments_2(self):
+		list1 = "mt"
+		test = fields_to_assignments(list1)
+		self.assertEqual(test, "mt")
+	#7
+	def test_fields_to_assignments_eq(self):
+		list1 = Pair("x",Pair("y",Pair("z", "mt")))
+		test = fields_to_assignments_eq(list1)
+		self.assertEqual(test, Pair('                and self.x == other.x', Pair('                and self.y == other.y', Pair('                and self.z == other.z', Pair('                )', 'mt')))))
+	#8
+	def test_fields_to_assignments_eq_2(self):
+		list1 = "mt"
+		test = fields_to_assignments_eq(list1)
+		self.assertEqual(test, Pair("                " + ")", "mt"))
+	#9
+	def test_fields_to_assignments_repr(self):
+		list1 = Pair("x",Pair("y",Pair("z", "mt")))
+		test = fields_to_assignments_repr(list1)
+		self.assertEqual(test,  Pair('self.x', Pair('self.y', Pair('self.z', 'mt'))))
+	#10
+	def test_fields_to_assignments_repr_2(self):
+		list1 = "mt"
+		test = fields_to_assignments_repr(list1)
+		self.assertEqual(test, "mt")
+	#11
+	def test_commasep(self):
+		list1 = Pair("x",Pair("y",Pair("z", "mt")))
+		test = commasep(list1)
+		self.assertEqual(test,  ", x, y, z")
+	#12
+	def test_commasep_2(self):
+		list1 = "mt"
+		test = commasep(list1)
+		self.assertEqual(test,  "")
+	#13
+	def test_init_method(self):
+		list1 = Pair("x",Pair("y",Pair("z", "mt")))
+		test = init_method(list1)
+		self.assertEqual(test, Pair('    def __init__(self, x, y, z):', Pair('        self.x = x', Pair('        self.y = y', Pair('        self.z = z', 'mt')))))
+	#14
+	def test_init_method_2(self):
+		list1 = "mt"
+		test = init_method(list1)
+		self.assertEqual(test, Pair("    def __init__(self):", Pair("        pass", "mt")))
+	#15
+	def test_eq_method(self):
+		list1 = ClassShape("Point", Pair("x", Pair("y",Pair("z", "mt"))))
+		test = eq_method(list1)
+		self.assertEqual(test, Pair('    def __eq__(self, other):', Pair('        return (type(other) == Point', Pair('                and self.x == other.x', Pair('                and self.y == other.y', Pair('                and self.z == other.z', Pair('                )', 'mt')))))))
+	#16
+	def test_eq_method_2(self):
+		list1 = ClassShape("Point", "mt")
+		test = eq_method(list1)
+		self.assertEqual(test, Pair("    " + "def __eq__(self, other):", Pair("        " + "return (type(other) == " + "Point", Pair("                )", "mt"))))
+	#17
+	def test_repr_method(self):
+		list1 = ClassShape("Point", Pair("x", Pair("y",Pair("z", "mt"))))
+		test = repr_method(list1)
+		self.assertEqual(test, Pair('    def __repr__(self):', Pair('        return "Point({!r}, {!r}, {!r})".format(' + 'self.x, self.y, self.z)', 'mt')))
+	#18
+	def test_repr_method_2(self):
+		list1 = ClassShape("Point", "mt")
+		test = repr_method(list1)
+		self.assertEqual(test, Pair("    " + "def __repr__(self):", Pair("    " + "    return " + '"' + "Point" + '()".format()', "mt")))
+	#19
+	def test_render_class(self):
+		print(render_class(ClassShape("Point", Pair("x", Pair("y",Pair("z", "mt"))))))
+	#20
+	def test_render_class_2(self):
+		print(render_class(ClassShape("Point", "mt")))
+	#21
+	def test_Pair(self):
+		print(Pair("x", Pair("y", Pair("z", "mt"))))
+	#22
+	def test_ClassShape(self):
+		print(ClassShape("Point", Pair("x", Pair("y", Pair("z", "mt")))))
+	#23
+	def test_Type(self):
+		self.assertEqual(ClassShape("Point", Pair("x", Pair("y",Pair("z", "mt")))), ClassShape("Point", Pair("x", Pair("y",Pair("z", "mt")))))
+
+if __name__ == '__main__':
+	unittest.main()

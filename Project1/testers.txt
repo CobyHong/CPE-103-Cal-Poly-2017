@@ -1,0 +1,20 @@
+
+#int_method test
+#print(init_method(Pair("x", Pair("y",Pair("z", "mt")))))
+
+#eq_method test
+#print(eq_method(ClassShape("Point", Pair("x", Pair("y",Pair("z", "mt"))))))
+
+#repr_method test
+#print(repr_method(ClassShape("Point", Pair("x", Pair("y",Pair("z", "mt"))))))
+
+#multi_sub test with commaswap. this for the {!r} aspect
+#print(commasep(multi_sub(Pair("x", Pair("y",Pair("z", "mt"))))))
+
+#commaswep test on method functions
+#print(commasep(field_to_assignments_repr(Pair("x", Pair("y",Pair("z", "mt"))))))
+
+#printed
+#print(render_class(ClassShape("Point", Pair("x", Pair("y",Pair("z", "mt"))))))
+
+#print(field_to_assignments_eq(Pair("x",Pair("y",Pair("z", "mt")))))
